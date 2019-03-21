@@ -7,9 +7,9 @@ on the merced cluster for
 free](https://it.ucmerced.edu/content/merced-cluster-new-user-account), for
 them or their students.
 
-Feel free to contribute to this repository, or [the wiki](https://github.com/ucmerced/merced-cluster/wiki)
+Feel free to contribute to this repository, or [the wiki](https://github.com/ucmerced/merced-cluster/wiki), it will be automatically synced with the merced cluster on an hourly basis. 
 
-If you have an account on the merced cluster you shoudl be able to find a copy
+If you have an account on the merced cluster you should be able to find a copy
 of this repository under `~/help`.
 
 If you are not familiar with using a cluster or a linux system feel free to book a consultation with research IT, or attend office hours every Friday on COB 1 – Willow Room
