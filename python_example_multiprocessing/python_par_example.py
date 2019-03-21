@@ -4,7 +4,6 @@ import multiprocessing as mp
 import timeit
 import numpy as np
 import sys
-print(sys.argv)
 
 # Get the number of processors available
 # poolCount = mp.cpu_count()
