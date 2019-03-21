@@ -9,7 +9,7 @@ import timeit
 import numpy as np
 
 # Define the number of random numbers to draw
-sz = 1000000*20
+sz = 2_000_000
 
 # Define start time
 start = timeit.default_timer()
@@ -28,7 +28,6 @@ def computePi(N,M):
 
     # Loop over N
     for i in range(N):
-        
         # Draw some random numbers
         x = np.random.rand(1)
         y = np.random.rand(1)
@@ -55,4 +54,4 @@ stop = timeit.default_timer()
 # Report the final approximation
 print("Pi estimate using " + str(sz) + " points on " + str(poolCount) + " workers: " + str(totOut))
 print("Total time: " + str(stop-start))
-
+print("Total COMPUTE time: ",  (stop-start))

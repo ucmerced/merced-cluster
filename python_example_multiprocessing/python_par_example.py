@@ -3,19 +3,27 @@
 import multiprocessing as mp
 import timeit
 import numpy as np
+import sys
+print(sys.argv)
 
 # Get the number of processors available
 # poolCount = mp.cpu_count()
-poolCount = 20
+if len(sys.argv)>1:
+    poolCount = int(sys.argv[1])
+else:
+    poolCount = 1
+
 
 # Define the number of random numbers to draw # This indicates the number of jobs that a single core will be doing. Since there are 20 cores in this example, we use 1000000.
-sz = 1000000 * 20 / poolCount
+sz = 2_000_000 // poolCount
 
 # Define start time
 start = timeit.default_timer()
 
 # Define function to compute pi
 def computePi(N,M):
+    assert type(N) == int
+    assert type(M) == int
 
     # N is the number of points
     # M is the processes number (to keep unique)
@@ -66,4 +74,5 @@ stop = timeit.default_timer()
 # Report the final approximation
 print("Pi estimate using " + str(sz) + " points on " + str(poolCount) + " workers: " + str(totOut))
 print("Total time: " + str(stop-start))
+print("Total COMPUTE time: ",  (stop-start)*poolCount)
 
