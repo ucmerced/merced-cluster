@@ -15,7 +15,7 @@ Creating an account on MERCED cluster
 https://it.ucmerced.edu/content/merced-cluster-new-user-account
 
 The MERCED Cluster is a resource available to students and faculty who have a need for a parallel computing environment. 
-Other systems are specific to their faculty-owners, but are  managed by Research Computing. 
+Other systems are specific to their faculty-owners, but areÂ  managed by Research Computing. 
 Account requests and approvals are required to access these systems.
 ****************************
 
@@ -30,10 +30,12 @@ visualization, advanced networking and data collaboration, and advanced technolo
 
 ****************************
 Research Software installation on clusters (https://it.ucmerced.edu/content/research-software-installation-server-and-cluster)
-You may request help in installing academic or commercial software that is properly licensed on Research Computing-managed servers or clusters. 
+You may requestÂ helpÂ in installing academic or commercial software that is properly licensed on Research Computing-managed servers or clusters. 
 For installations on the MERCED Cluster, users may install software in their home directories without prior permission. 
 For global installation on the MERCED Cluster (e.g. access to the software for multiple users), 
-installation on other servers or clusters, or for help in installing software on Research Computing-managed systems, users may request this service via this form.
+installation on other servers or clusters, or forÂ helpÂ in installing software on Research Computing-managed systems, users may request this service via this form.
 ****************************
-Any other Research Computing requests that do not fall under these categories can be placed by clicking on "Submit a General IT request" in IT website (it.ucmerced.edu).
-General information regarding MERCED cluster can be found in HPC Wiki Knowledgebase articles (hpcwiki.ucmerced.edu) .
+Any other Research Computing requests that do not fall under these categories can be placed by clicking on "Submit a General IT request" inÂ IT website (it.ucmerced.edu).
+General information regarding MERCED cluster can be found inÂ HPC Wiki Knowledgebase articles (hpcwiki.ucmerced.edu)Â .
+
+X
