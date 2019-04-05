@@ -5,9 +5,12 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=1G
+#
 #SBATCH --partition fast.q 
 #SBATCH --time=0-00:15:00     # 0days 15 minutes
+#
 #SBATCH --output=myjob_%j.stdout
+#
 #SBATCH --job-name=test
 #SBATCH --export=ALL
 
