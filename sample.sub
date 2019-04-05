@@ -3,18 +3,19 @@
 
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
-#SBATCH -p fast.q 
-#SBATCH --mem-per-cpu=96G
+#SBATCH --cpus-per-task=1
+#SBATCH --partition fast.q 
+#SBATCH --mem-per-cpu=1G
 #SBATCH --time=0-00:15:00     # 0days 15 minutes
-#SBATCH --output=my.stdout
+#SBATCH --output=myjob_%j.stdout
 #SBATCH --job-name=test
 #SBATCH --export=ALL
 
-# This submission file will run a simple set of commands. All stdout will
-# be captured in my.stdout (as specified in the Slurm command above).
-# This job file uses a shared-memory parallel environment and requests 1
-# cores on a single node.This script loads PGI compiler module named "pgi"
-#
+# This submission file will run a simple set of commands. All stdout will be
+# captured in mmyjob_XXXX.stdout (as specified in the Slurm command above).
+# This job file uses a shared-memory parallel environment and requests 1 cores
+# on a single node.This script loads PGI compiler module named "pgi"
+
 whoami
 module load pgi
 
