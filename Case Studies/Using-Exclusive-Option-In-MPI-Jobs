@@ -1,0 +1,12 @@
+Using exclusive option in MPI jobs
+
+If your jobs require dedicated nodes (example: MPI jobs), you will have to use
+
+#SBATCH —exclusive
+
+option in your submission script.
+
+When you use —exclusive option, the job allocation cannot share nodes with other running jobs, which is important to avoid other jobs potentially interfering with your MPI 
+job.
+
+On MERCED cluster, the default partition configuration is shared and oversubscribed.
