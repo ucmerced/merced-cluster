@@ -1,2 +1,13 @@
 #!/bin/bash
-#SBATCH  will fill that later, just a de mo of doing a pull-request
+##
+#SBATCH --partition=std.q  ## queue based on wall-clock time limitation
+#SBATCH --nodes=2 ## or "-N". Min no. of nodes (eg. 3)
+#SBATCH --ntasks-per-node=24 ## Max. tasks per node.
+##
+#SBATCH --job-name=gbm8 ## Name of Job in queue
+#SBATCH --mail-user=saraya@ucmerced.edu
+#SBATCH --mail-type=ALL
+module load openmpi-2.0/intel
+module load anaconda3
+source activate my-R
+mpirun -np 48 --bind-to none R CMD BATCH --no-save BRT8.R
