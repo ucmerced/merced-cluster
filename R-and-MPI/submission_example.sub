@@ -5,7 +5,7 @@
 #SBATCH --ntasks-per-node=24 ## Max. tasks per node.
 ##
 #SBATCH --job-name=gbm8 ## Name of Job in queue
-#SBATCH --mail-user=saraya@ucmerced.edu
+#SBATCH --mail-user=myuser@example.com
 #SBATCH --mail-type=ALL
 module load openmpi-2.0/intel
 module load anaconda3
