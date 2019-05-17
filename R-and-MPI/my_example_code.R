@@ -1,13 +1,10 @@
 ## (1) Setup Environment
 # Load libraries 
-library(doMPI) # Parallel computation package (also loads: foreach, iterators and parallel)
+library(doMPI) # Parallel computation package.
 ## (2) Setup Parallel Proccessing
-ncores <- detectCores() # get the number of available cores
-cl <- startMPIcluster() # start a cluster with default
-registerDoMPI(cl) # register cluster to work on all cores
-# Document parallel processing variables
-print(ncores) # number of cores available and requested
-clusterSize(cl)
+cl <- startMPIcluster() # start a cluster with defaults (uses all available cores)
+registerDoMPI(cl)
+clusterSize(cl) # Print size for documentation.
 ## (3) Sample process that uses foreach loop.
 # 100 000 bootstrap iteration in parallel example
 x <- iris[which(iris[,5] != "setosa"), c(1,5)]
@@ -20,9 +17,7 @@ ptime <- system.time({
 								}
 					})
 ptime
-## (4) End Run
-# Stop the cluster
+## (4) Stop cluster and Exit.
 closeCluster(cl)
 mpi.quit()
-# Exit R
 q()

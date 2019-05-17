@@ -16,7 +16,7 @@ syn_data[,4] <- c(runif(n.rows, 1, 50)) # random variable
 # calculate the output variable
 syn_data[,1] <- syn_data[,2] * syn_data[,3] + syn_data[,4]
 #
-## (2) Tune Model with caret package
+## (2) Tune model with caret package
 # Define tuning parameters for GBM model
 gbm_grid <- expand.grid(interaction.depth = 2:100,
                         n.trees = floor((5:100)*50),
@@ -27,28 +27,23 @@ ctrl_tr <- trainControl(method = "repeatedcv",
                         number = 10,
                         repeats = 5,
                         returnResamp = "all")
-#
-## (3) Setup Parallel Proccessing
-ncores <- detectCores() # get the number of available cores
-cl <- startMPIcluster() # start a cluster
-registerDoMPI(cl) # register cluster to work on all cores
-# Document parallel processing variables
-print(ncores) # number of cores available and requested
-clusterSize(cl)
-#
-## (4) Run Model Training
+
+## (3) Setup parallel proccessing
+cl <- startMPIcluster() # start a cluster with defaults (uses all available cores)
+registerDoMPI(cl) 
+clusterSize(cl) # Print size for documentation.
+
+## (4) Run model training
 gbm_fit <- train(V1~., data = syn_data,
                  method = "gbm",
                  tuneGrid = gbm_grid,
                  trControl = ctrl_tr,
                  verbose = FALSE)          
 #
-## (5) Save  Model
+## (5) Save  model
 saveRDS(gbm_fit, file = "my_gbm_model.rds")
 #
-## (6) Stop the cluster
+## (6) Stop cluster and Exit
 closeCluster(cl)
 mpi.quit()
-#
-## (7) Exit R
 q()
