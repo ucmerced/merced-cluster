@@ -1,14 +1,14 @@
 ## (1) Setup Environment
 # Load libraries 
-library(doMPI) # Parallel computation package.
+library(doMPI) # Parallel computation package. Also loads 'foreach' package
 ## (2) Setup Parallel Proccessing
 cl <- startMPIcluster() # start a cluster with defaults (uses all available cores)
 registerDoMPI(cl)
 clusterSize(cl) # Print size for documentation.
 ## (3) Sample process that uses foreach loop.
-# 100 000 bootstrap iteration in parallel example
+# 1000 bootstrap iteration in parallel example
 x <- iris[which(iris[,5] != "setosa"), c(1,5)]
-trials <- 100000
+trials <- 1000
 ptime <- system.time({
 					r <- foreach(icount(trials), .combine=cbind) %dopar% {
 								ind <- sample(100, 100, replace=TRUE)

@@ -1,11 +1,11 @@
 #!/bin/bash
 ##
-#SBATCH --partition=std.q  ## queue based on wall-clock time limitation.
+#SBATCH --partition=fast.q  ## queue based on wall-clock time limitation.
 #SBATCH --nodes=2 ## or "-N". Min noumber of nodes.
 #SBATCH --ntasks-per-node=24 ## Max. tasks per node (number of cores).
 ##
 #SBATCH --job-name=myjob ## Name of Job in queue (Replace 'myjob')
-#SBATCH --mail-user=myemail@example.com ## (Replace email address)
+#SBATCH --mail-user=<myemail@example.com> ## (Replace <email address>)
 #SBATCH --mail-type=ALL
 module load openmpi-2.0/intel
 module load anaconda3
