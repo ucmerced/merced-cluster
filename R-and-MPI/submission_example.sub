@@ -10,6 +10,8 @@
 module load openmpi-2.0/intel
 module load anaconda3
 source activate my-R
+
 ## cores x nodes = 48 (update manually)
 ## Repace 'my_example_code.R' file
 mpirun -np 48 --bind-to none R CMD BATCH --no-save my_example_code.R
+
