@@ -1,13 +1,17 @@
 #!/bin/bash
 ##
-#SBATCH --partition=std.q  ## queue based on wall-clock time limitation
-#SBATCH --nodes=2 ## or "-N". Min no. of nodes (eg. 3)
-#SBATCH --ntasks-per-node=24 ## Max. tasks per node.
+#SBATCH --partition=fast.q  ## queue based on wall-clock time limitation.
+#SBATCH --nodes=2 ## or "-N". Min noumber of nodes.
+#SBATCH --ntasks-per-node=24 ## Max. tasks per node (number of cores).
 ##
-#SBATCH --job-name=gbm8 ## Name of Job in queue
-#SBATCH --mail-user=myuser@example.com
+#SBATCH --job-name=myjob ## Name of Job in queue (Replace 'myjob')
+#SBATCH --mail-user=<myemail@example.com> ## (Replace <email address>)
 #SBATCH --mail-type=ALL
 module load openmpi-2.0/intel
 module load anaconda3
 source activate my-R
-mpirun -np 48 --bind-to none R CMD BATCH --no-save BRT8.R
+
+## cores x nodes = 48 (update manually)
+## Repace 'my_example_code.R' file
+mpirun -np 48 --bind-to none R CMD BATCH --no-save my_example_code.R
+
