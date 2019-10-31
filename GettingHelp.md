@@ -2,9 +2,9 @@
 
 The easiest way to get help with research computing is to attend HPC Walk-In clinics.
 >  Where?
-COB-1 322
+ACS 306
 > When?
-Every Friday from 10:30 am - 12 noon
+Every Friday from 10:00 am - 11:30 am
 
 
 # Creating an account on MERCED cluster 
