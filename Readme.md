@@ -3,7 +3,7 @@
 This repository contains examples on how to use the MERCED cluster. If you are
 on the UC Merced Campus, or using the VPN you can access the cluster at
 http://merced.ucmerced.edu. Faculty on the UC Merced campus, can [request a
-account on the merced cluster for
+account on the MERCED cluster for
 free](https://it.ucmerced.edu/content/merced-cluster-new-user-account), for them
 or their students.
 
