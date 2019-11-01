@@ -9,10 +9,9 @@ or their students.
 
 Feel free to contribute to this repository, or [the wiki](https://github.com/ucmerced/merced-cluster/wiki), it will be automatically synced with the merced cluster on an hourly basis. 
 
-If you have an account on the merced cluster you should be able to find a copy
-of this repository under `~/help`.
+If you have an account on the merced cluster you should be able to find a copy of this repository under `~/help`.
 
-If you are not familiar with using a cluster or a linux system feel free to book a consultation with research IT, or attend office hours every Friday 10 am to 11:30 am in ACS-306.
+If you are not familiar with using a cluster or a linux system feel free to book a consultation with [Research IT](https://it.ucmerced.edu/content/research-it-consultation), or attend HPC Walk-inc hours every Friday 10 am to 11:30 am in ACS-306.
 
 ---
 
