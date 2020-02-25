@@ -1,0 +1,26 @@
+#!/bin/bash -l
+
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem-per-cpu=100M
+ 
+#SBATCH --partition fast.q
+#SBATCH --time=0-00:05:00     # 0days 5 minutes
+ 
+#SBATCH --output=myjob_%j-%a.stdout
+ 
+#SBATCH --job-name=test-array
+#SBATCH --export=ALL
+
+echo "Running job with TASK ID $SLURM_TASK_ID"
+
+PARAMETERS=$(cat input.txt | head -n $SLURM_ARRAY_TASK_ID | tail -n1)
+
+echo "I will use the parameters $PARAMETERS"
+
+echo "========================"
+
+./program $PARAMETERS
+
+echo "======== THE END ======="

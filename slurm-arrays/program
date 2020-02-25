@@ -1,0 +1,8 @@
+#!/usr/bin/env python
+from __future__ import print_function
+
+import sys
+if 'rock' in sys.argv:
+    print('The Rock always wins.', sys.argv )
+else:
+    print("the best way to win is to not play.", sys.argv )
