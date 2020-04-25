@@ -1,18 +1,39 @@
 # copy that in your home folder and remove this first line
-#! /bin/bash -l
+#!/bin/bash -l
 
+## Bellow we ask for :
+# - only 1 machines (machies have at least 20 CPUs)
+# - only one task (you rarely need more than one task when not doing many machines)
+# - we indicate we plan on using at max a single CPU, and 1G of Ram.
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=1G
 #
+
 #SBATCH --partition fast.q 
-#SBATCH --time=0-00:15:00     # 0days 15 minutes
+#(You can use multiple partition comma separated)
+
+#SBATCH --time=0-00:15:00     # 0 days 00 hours, 15 minutes, 00 seconds
 #
 #SBATCH --output=myjob_%j.stdout
 #
 #SBATCH --job-name=test
 #SBATCH --export=ALL
+
+## Constraints and Features (advanced users), 
+# Many of the Merced's nodes have features that other nodes do not have; for example, GPUs
+# or infiniband interconnect for MPI jobs.
+#
+# You may want to requests nodes with only these features using the --constraint
+# option and specifying a list of what you wish to request. Use `sinfo -o "%20N  %10c  %10m  %25f"`
+# to see which features are availlable. Currently:
+#    ib: infiniband (for fast, low latency IO or MPI jobs)
+#    gpu: Graphical Process Units , separated in K20m, P100 if you need to be more specific.
+# Examples of requesting features:
+#   #SBATCH --constraint=ib 
+#   #SBATCH --constraint=K20m,ib (infiniband and k20 GPU)
+#
 
 # This submission file will run a simple set of commands. All stdout will be
 # captured in mmyjob_XXXX.stdout (as specified in the Slurm command above).
