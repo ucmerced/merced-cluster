@@ -11,7 +11,7 @@ Feel free to contribute to this repository, or [the wiki](https://github.com/ucm
 
 If you have an account on the merced cluster you should be able to find a copy of this repository under `~/help`.
 
-If you are not familiar with using a cluster or a linux system feel free to book a consultation with [Research IT](https://it.ucmerced.edu/content/research-it-consultation), or attend HPC Walk-inc hours every Friday 10 am to 11:30 am in ACS-306.
+If you are not familiar with using a cluster or a linux system feel free to book a consultation with [Research IT](https://it.ucmerced.edu/content/research-it-consultation), or attend HPC Zoom-in sessions every Monday and Thursday from 2 pm to 3 pm. Zoom details are presented in MERCED login message as well as weekly HPC update emails.
 
 ---
 
