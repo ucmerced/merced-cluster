@@ -1,5 +1,6 @@
 ![ISSUES](https://img.shields.io/github/issues/ucmerced/merced-cluster) ![STARS](https://img.shields.io/github/stars/ucmerced/merced-cluster) ![FORKS](https://img.shields.io/github/forks/ucmerced/merced-cluster)
 
+# Our Wiki has moved to our newly published documentation page! Please [click here](https://ucmerced.github.io/hpc_docs/#/) to get redirected! 
 # _MERCED_ Cluster
 
 This repository contains examples on how to use the _MERCED_ cluster. If you are
